@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <title>Header</title>
+</head>
+<header th:fragment="header">
+    <nav class="navbar navbar-expand-lg bg-light position-relative shadow-lg p-3 mb-5 bg-body rounded">
+        <div class="container-fluid shadow" style="background-color: #e3f2fd;">
+            <a class="navbar-brand " href="#">Welcome to eRegistrar</a>
+            <button class="btn btn-light"><a href="/eRegistrar/home">Home</a></button>
+            <button class="btn btn-light"><a href="/eRegistrar/about">About</a></button>
+            <button class="btn btn-light"><a href="/eRegistrar/student/list">Students</a></button>
+        </div>
+    </nav>
+</header>
+</html>
