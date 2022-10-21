@@ -9,8 +9,16 @@
 <body class="bg-success p-2 text-dark bg-opacity-10">
 <header th:replace="fragments/header :: header"></header>
 <main>
-    <h1 class="modal-title">List of Student that they are available.</h1>
+    <div class="container-fluid">
+        <h1 class="modal-title">List of Student that they are available.</h1>
 
+        <form class="d-flex container" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+    </div>
+
+<h1></h1>
     <div class="mb-4 shadow-lg p-3 mb-5 bg-body rounded">
         <div class="p-2 bg-info bg-opacity-10 border border-info border-start-0 rounded-end">
             <table class="table table-striped">
@@ -64,8 +72,8 @@
 
                     </li>
                 </ul>
-            </nav>
 
+            </nav>
 
         </div>
     </div>
