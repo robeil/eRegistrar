@@ -11,15 +11,15 @@
 <main>
     <div class="container text-center border border-secondary shadow-lg p-3 mb-5 bg-body rounded">
 
-        <form class="table" method="post" action="/eRegistrar/student/update" th:object="${student}">
+        <form class="table" method="post" th:action="@{/eRegistrar/student/update}" th:object="${student}">
             <h1>Edit Student Information</h1>
             <div class="row g-3 align-items-center">
                 <h1></h1>
-                <div class="col-auto input-group">
+                <div class="input-group">
                     <label class="form-label">Student Number : </label>
-                    <input type="text" class="form-control" th:field="${student.studentNumber}" autofocus>
+                    <input type="text" class="form-control" th:value="${student.studentNumber}" aria-describedby="passwordHelpInline">
                 </div>
-                <div class="col-auto input-group">
+                <div class="input-group">
                     <label class="form-label">First Name : </label>
                     <input type="text" class="form-control" th:value="${student.firstName}"
                            aria-describedby="passwordHelpInline">
@@ -54,7 +54,7 @@
             <div>
                 <a type="cancel" class="btn btn-danger" href="/eRegistrar/student/list">Cancel</a>
                 <input class="btn btn-info" type="reset" value="Reset"/>
-                <input class="btn btn-success" type="submit" value="Update Student"/>
+                <input class="btn btn-success" type="submit" value="Update Student" href="/eRegistrar/student/list"/>
             </div>
         </form>
     </div>

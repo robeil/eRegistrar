@@ -23,10 +23,11 @@ public class StudentController {
      * @return
      */
     @GetMapping(value = {"/list"})
-    public ModelAndView listStudents(){
-        var students = studentService.getAllStudents();
+    public ModelAndView listStudents(@RequestParam(defaultValue = "0") int pageNo){
+        var students = studentService.getAllStudents(pageNo);
         var modelAndView = new ModelAndView();
         modelAndView.addObject("students",students);
+        modelAndView.addObject("currentPageNo",pageNo);
         modelAndView.setViewName("secured/student/list");
         return modelAndView;
     }
